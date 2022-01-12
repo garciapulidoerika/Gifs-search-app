@@ -1,10 +1,20 @@
+// aca por que no se importa react?
 
-const getGifs = async () => {
-    const url = `https://api.giphy.com/v1/gifs`;
-    const res = await fetch(url).then((res) => res.json());
+export const getGifs = async (category) => {
+    const apikey = 'FKYPtcMbD1xo5iKVI8zc6NI0IvzK7rg6';
+    const url = `https://api.giphy.com/v1/gifs/search?q=${encodeURI(category)}&limit=15&api_key=${apikey}`;
+    const res = await fetch(url);
 
-    console.log(res);
+    const {data} = await res.json();
+    const gifs = data.map(gif => {
+        return {
+            id: gif.id,
+            title: gif.title,
+            url: gif.images.original.url,
+        }
+    })
 
+    console.log(gifs);
+    return gifs;
 }
 
-export default getGifs;

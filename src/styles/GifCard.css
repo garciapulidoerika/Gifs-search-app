@@ -1,0 +1,13 @@
+.card {
+    width: 15%;
+    align-content: center;
+    margin: 1%;
+    overflow: hidden;
+}
+
+.card img {
+    max-height: 170px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid grey;
+}

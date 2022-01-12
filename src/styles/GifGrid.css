@@ -1,0 +1,15 @@
+.grid {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.cname {
+    background: rgb(7,249,124);
+    background: linear-gradient(90deg, rgba(7,249,124,1) 0%, rgba(244,233,9,1) 22%, rgba(253,29,41,1) 49%, rgba(150,55,252,1) 75%, rgba(69,223,252,1) 100%);
+    color: white;
+    padding: 1%;
+    text-align: center;
+}
